@@ -20,10 +20,6 @@ on:
       - cron: '0 3 * * 2'
   workflow_dispatch:
 
-  on: [push]
-  on: [pull_request]
-  on: [workflow_dispatch]
-
 jobs:
   one:
     runs-on: ubuntu-latest
