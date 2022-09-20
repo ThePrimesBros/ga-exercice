@@ -9,5 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run on
-      two:
-        runs-on: ubuntu-latest
+        two:
+          runs-on: ubuntu-latest
