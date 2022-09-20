@@ -5,7 +5,9 @@ on:
     types: [customEvent]
 
 jobs:
-  steps:
-    - name: Run on
-    two:
-      runs-on: ubuntu-latest
+  print-event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run on
+      two:
+        runs-on: ubuntu-latest
