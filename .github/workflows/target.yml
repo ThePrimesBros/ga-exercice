@@ -1,0 +1,14 @@
+name: Target
+
+on:
+  repository_dispatch:
+    types: [customEvent]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: Print client payload
+        run: |
+          echo ${{ github.event.client_payload.message }}

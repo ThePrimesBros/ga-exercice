@@ -1,0 +1,9 @@
+name: Client
+
+on:
+  repository_dispatch:
+    types: [customEvent]
+
+jobs:
+  two:
+    runs-on: ubuntu-latest
