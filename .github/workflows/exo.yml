@@ -4,21 +4,25 @@ on:
   push:
     branches:
       - dev
-      - feat/*
-    branches-ignore:
-      - staging
+      #- feat/*
+    #branches-ignore:
+    #  - staging
     paths:
       - '**.ts'
-      - 'src/**'
+      #- 'src/**'
     pull_request:
       types: [opened]
-      types: [closed]
+      #types: [closed]
     schedule:
       - cron: "*/5 * * * *"
-      - cron: '30 0-21/3 * * *'
-      - cron: '30 1-22/3 * * *'
-      - cron: '0 3 * * 2'
+      #- cron: '30 0-21/3 * * *'
+      #- cron: '30 1-22/3 * * *'
+      #- cron: '0 3 * * 2'
   workflow_dispatch:
+
+  #on: [push]
+  #on: [pull_request]
+  #on: [workflow_dispatch]
 
 jobs:
   one:
