@@ -1,0 +1,26 @@
+name: Runner's exercice
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'runner**'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x]
+        # os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: echo 'STARTING HERE'
+      - run: |
+          npm install
+          npm run test
+        working-directory: ./node-app
