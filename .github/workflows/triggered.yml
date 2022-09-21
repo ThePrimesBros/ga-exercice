@@ -1,0 +1,13 @@
+name: Triggered Workflow
+
+on:
+  repository_dispatch:
+    types: [MyEvent]
+
+jobs:
+  print_payload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run : |
+        echo ${{ github.event.client_payload.paramA }}

@@ -32,7 +32,7 @@ jobs:
       - run: echo one
 
   two:
-    if: github.event_name != 'pull_request'
+    #if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
 
     steps:

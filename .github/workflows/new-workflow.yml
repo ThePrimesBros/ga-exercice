@@ -1,0 +1,15 @@
+name: Respository Dispatch
+on:
+  repository_dispatch:
+    types: [customEvent]
+jobs:
+  one:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo one
+# Compare this snippet from .github\workflows\client.yml:
+# name: Client
+#
+# on:
+#   repository_dispatch:
+#     types: [customEvent]
