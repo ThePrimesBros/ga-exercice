@@ -11,5 +11,4 @@ jobs:
       with:
         node-version: 16
     - run: npm ci
-      working-directory: ./node-app
-    - run: npm test
+    - run: npm run test
