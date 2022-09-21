@@ -9,5 +9,4 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run : |
-        echo ${{ github.event.client_payload.paramA }}
+      - run : echo ${{ github.event.client-payload.paramA }}
